@@ -1,0 +1,20 @@
+<html lang="en">
+<head>
+    <%- include('./partials/head.ejs') %>
+</head>
+<body>
+    <%- include('./partials/nav.ejs') %>
+    <div class="create-blog content">
+        <form action="/blogs" method="POST">
+            <label for="title">포스트 제목:</label>
+            <input type="text" id="title" name="title" required>
+            <label for="snippet">포스트 한줄 소개</label>
+            <input type="text" id="snippet" name="snippet" required>
+            <label for="body">포스트 내용:</label>
+            <textarea id="body" name="body" required></textarea>
+            <button>업로드</button>
+        </form>
+    </div>
+    <%- include('./partials/footer.ejs') %>
+</body>
+</html>
